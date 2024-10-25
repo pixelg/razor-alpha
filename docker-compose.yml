@@ -1,0 +1,6 @@
+﻿services:
+  razoralpha:
+    image: razoralpha
+    build:
+      context: .
+      dockerfile: RazorAlpha/Dockerfile

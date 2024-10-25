@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  razoralpha:
+    build:
+      context: "/home/blee/RiderProjects/RazorAlpha"
+      dockerfile: "RazorAlpha/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/RazorAlpha.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net8.0/RazorAlpha.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "razoralpha:dev"
+    ports: []
+    volumes:
+    - "/home/blee/.nuget/packages:/home/app/.nuget/packages"
+    - "/home/blee/RiderProjects/RazorAlpha/RazorAlpha:/app:rw"
+    - "/home/blee/RiderProjects/RazorAlpha:/src:rw"
+    working_dir: "/app"
